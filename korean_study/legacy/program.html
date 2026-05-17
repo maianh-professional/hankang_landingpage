@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chương trình Học tập Toàn diện | Eco-Future</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .program-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            padding: 8rem 0;
+            align-items: center;
+        }
+        .program-list {
+            list-style: none;
+        }
+        .program-list li {
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            margin-bottom: 1rem;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+        }
+        .program-list li:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-strong);
+        }
+        .icon svg {
+            width: 3rem;
+            height: 3rem;
+            stroke-width: 1.5px;
+        }
+
+        .icon-small svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }            
+        .program-list .number {
+            width: 40px;
+            height: 40px;
+            background: var(--secondary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-decor"></div>
+    <div class="bg-overlay"></div>
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo" style="text-decoration: none;">Seoul<span>Study</span></a>
+            <nav class="nav">
+                <a href="program.html">Program</a>
+                <a href="internship.html">Internship</a>
+                <a href="community.html">Community</a>
+                <a href="wellness.html">Wellness</a>
+            </nav>
+            <button class="btn btn-primary">Join us</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="secondary-hero">
+            <div class="container">
+                <span class="tag">Academic Excellence</span>
+                <h1 class="fade-in">Lộ Trình Học Tập<br><span class="italic">Tương Lai</span></h1>
+                <p class="fade-in delay-1">Hệ thống giáo dục tiên tiến kết hợp giữa lý thuyết hàn lâm và kỹ năng thực tế, được thiết kế riêng cho sinh viên quốc tế tại Hàn Quốc.</p>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid fade-up">
+                    <div class="stat-item">
+                        <h2>95%</h2>
+                        <p>Tỷ lệ có việc làm</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2>Top 10</h2>
+                        <p>Đại học Toàn cầu</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2>$20k</h2>
+                        <p>Học bổng tối đa</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2>500+</h2>
+                        <p>Đối tác Doanh nghiệp</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="details">
+            <div class="container">
+                <div class="program-detail">
+                    <div class="image-wrapper fade-in">
+                        <img src="desk.png" alt="Learning" style="width: 100%; border-radius: 30px;">
+                    </div>
+                    <div class="content">
+                        <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">Tại sao chọn<br>Chương trình của chúng tôi?</h2>
+                        <ul class="program-list">
+                             <li class="stagger-item delay-1">
+                                <div class="number"><i data-lucide="graduation-cap"></i></div>
+                                <div>
+                                    <h4>Bằng cấp Quốc tế</h4>
+                                    <p>Chứng chỉ được công nhận toàn cầu bởi các tổ chức giáo dục uy tín.</p>
+                                </div>
+                            </li>
+                             <li class="stagger-item delay-2">
+                                <div class="number"><i data-lucide="book-open-check"></i></div>
+                                <div>
+                                    <h4>Học tập Trải nghiệm</h4>
+                                    <p>Hơn 40% thời lượng là các dự án thực tế và tham quan doanh nghiệp.</p>
+                                </div>
+                            </li>
+                             <li class="stagger-item delay-3">
+                                <div class="number"><i data-lucide="headset"></i></div>
+                                <div>
+                                    <h4>Hỗ trợ 24/7</h4>
+                                    <p>Đội ngũ mentor luôn sẵn sàng hỗ trợ bạn trong cả học tập và đời sống.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <div class="cta-box fade-up">
+                    <h2>Sẵn sàng bắt đầu hành trình?</h2>
+                    <p>Đăng ký tư vấn miễn phí để nhận lộ trình cá nhân hóa ngay hôm nay.</p>
+                    <button class="btn btn-white btn-large">Nhận Lộ Trình Ngay</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="logo">Seoul<span>Study</span></div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 StudyKorea Eco-Futurism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in, .fade-up, .stagger-item').forEach(el => observer.observe(el));
+        lucide.createIcons();
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cân bằng & Sức khỏe | Eco-Future</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .wellness-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            padding: 6rem 0;
+        }
+        .service-list {
+            display: grid;
+            gap: 2rem;
+        }
+        .service-item {
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            display: flex;
+            gap: 1.5rem;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+        }
+        .service-item:hover {
+            transform: translateX(10px);
+            box-shadow: var(--shadow-strong);
+        }
+        .service-icon {
+            font-size: 2rem;
+        }
+        .zen-section {
+            background: rgba(235, 242, 238, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 10rem 0;
+            text-align: center;
+            border-radius: 100px 0 100px 0;
+        }
+        .zen-content h2 {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-decor"></div>
+    <div class="bg-overlay"></div>
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo" style="text-decoration: none;">Seoul<span>Study</span></a>
+            <nav class="nav">
+                <a href="program.html">Program</a>
+                <a href="internship.html">Internship</a>
+                <a href="community.html">Community</a>
+                <a href="wellness.html">Wellness</a>
+            </nav>
+            <button class="btn btn-primary">Join us</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="secondary-hero">
+            <div class="container">
+                <span class="tag">Holistic Living</span>
+                <h1 class="fade-in">Sống Trọn Vẹn<br><span class="italic">Từng Phút Giây</span></h1>
+                <p class="fade-in delay-1">Học tập đỉnh cao cần đi đôi với sự bình an trong tâm hồn. Chúng tôi tạo ra môi trường để bạn phát triển toàn diện nhất.</p>
+            </div>
+        </section>
+
+        <section class="wellness-services">
+            <div class="container">
+                <div class="wellness-hero" style="padding: 8rem 0;">
+                    <div class="wellness-content fade-in">
+                        <span class="tag">Dịch vụ đặc quyền</span>
+                        <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">Chăm sóc <span class="italic">Thân - Tâm - Trí</span></h2>
+                        <p style="margin-bottom: 3rem; font-size: 1.1rem; color: var(--text-light);">Tại Seoul Study, chúng tôi tin rằng một sinh viên hạnh phúc là một sinh viên thành công. Các dịch vụ wellness được thiết kế cá nhân hóa để hỗ trợ bạn vượt qua những áp lực học tập và sự thay đổi môi trường.</p>
+                        
+                        <div class="service-list">
+                            <div class="service-item fade-up">
+                                <div class="service-icon"><i data-lucide="flower-2"></i></div>
+                                <div>
+                                    <h4>Yoga & Thiền định</h4>
+                                    <p>Các lớp học sáng sớm tại công viên hoặc phòng gym hiện đại giúp bạn nạp năng lượng tích cực cho ngày mới.</p>
+                                </div>
+                            </div>
+                            <div class="service-item fade-up delay-1">
+                                <div class="service-icon"><i data-lucide="apple"></i></div>
+                                <div>
+                                    <h4>Tư vấn Dinh dưỡng</h4>
+                                    <p>Xây dựng chế độ ăn uống cân bằng với thực phẩm bản địa Hàn Quốc, giúp duy trì thể lực tốt nhất.</p>
+                                </div>
+                            </div>
+                            <div class="service-item fade-up delay-2">
+                                <div class="service-icon"><i data-lucide="brain"></i></div>
+                                <div>
+                                    <h4>Tư vấn Tâm lý 1-1</h4>
+                                    <p>Các chuyên gia tâm lý giàu kinh nghiệm luôn sẵn sàng lắng nghe và hỗ trợ bạn giải quyết các vấn đề cá nhân.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-wrapper fade-in">
+                        <div class="bento-grid" style="grid-template-columns: 1fr;">
+                            <div class="bento-item" style="background: var(--primary); color: var(--white); min-height: 400px;">
+                                <div class="icon"><i data-lucide="sparkles"></i></div>
+                                <h3>98%</h3>
+                                <p>Sinh viên cảm thấy được hỗ trợ tốt về mặt tinh thần.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="zen-section">
+            <div class="container">
+                <div class="zen-content fade-in">
+                    <h2 class="italic">"Tâm trí bình an là chìa khóa<br>của sự sáng tạo."</h2>
+                    <button class="btn btn-primary btn-large">Khám Phá Thêm</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="logo">Seoul<span>Study</span></div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 StudyKorea Eco-Futurism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in, .fade-up').forEach(el => observer.observe(el));
+        lucide.createIcons();
+    </script>
+</body>
+</html>

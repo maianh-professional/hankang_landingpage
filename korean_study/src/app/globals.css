@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1e40af;
+  --color-primary-dark: #1e3a8a;
+  --color-primary-light: #3b82f6;
+  --color-secondary: #f97316;
+  --color-secondary-dark: #ea580c;
+  --color-bg: #ffffff;
+  --color-bg-muted: #f8fafc;
+  --color-text: #0f172a;
+  --color-text-muted: #475569;
+  --color-border: #e2e8f0;
+  --color-accent: #eff6ff;
+
+  --font-playfair: var(--font-playfair);
+  --font-inter: var(--font-inter);
+}
+
+@layer base {
+  body {
+    @apply text-text antialiased relative min-h-screen;
+    font-family: var(--font-inter), ui-sans-serif, system-ui;
+    background-color: white; /* Fallback */
+  }
+
+  /* Base White Layer - to allow negative z-index elements to show */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: -20;
+    pointer-events: none;
+  }
+
+  /* Premium Academic Background Image Overlay */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/bg-academic.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.15;
+    filter: grayscale(20%);
+    z-index: -15;
+    pointer-events: none;
+  }
+
+  /* Educational Grid Pattern Layer */
+  .bg-grid-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(circle at 2px 2px, rgba(30, 64, 175, 0.05) 1px, transparent 0),
+      linear-gradient(to right, rgba(30, 64, 175, 0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(30, 64, 175, 0.02) 1px, transparent 1px);
+    background-size: 24px 24px, 120px 120px, 120px 120px;
+    z-index: -10;
+    pointer-events: none;
+  }
+
+  .bg-blob-blue {
+    position: fixed;
+    top: 20%;
+    left: -10%;
+    width: 1000px;
+    height: 1000px;
+    background: radial-gradient(circle, rgba(30, 64, 175, 0.04) 0%, transparent 70%);
+    filter: blur(120px);
+    z-index: -9;
+    pointer-events: none;
+  }
+
+  .bg-blob-orange {
+    position: fixed;
+    bottom: 20%;
+    right: -10%;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(249, 115, 22, 0.03) 0%, transparent 70%);
+    filter: blur(100px);
+    z-index: -9;
+    pointer-events: none;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight text-primary;
+    font-family: var(--font-playfair), ui-serif, Georgia;
+  }
+
+  ::selection {
+    @apply bg-primary text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-4 bg-primary text-white rounded-full font-semibold 
+    transition-all duration-300 hover:bg-primary-dark hover:shadow-xl hover:-translate-y-1 
+    flex items-center gap-2;
+    font-family: var(--font-inter);
+  }
+
+  .btn-outline {
+    @apply px-8 py-4 border-2 border-primary text-primary rounded-full font-semibold 
+    transition-all duration-300 hover:bg-primary hover:text-white hover:shadow-lg hover:-translate-y-1;
+    font-family: var(--font-inter);
+  }
+
+  .glass-card {
+    @apply rounded-3xl p-8 shadow-sm bg-white/80 backdrop-blur-xl border border-border;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl mb-6 relative inline-block;
+  }
+
+  .section-title::after {
+    content: '';
+    @apply absolute -bottom-2 left-0 w-24 h-1 bg-secondary rounded-full;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-light;
+}
